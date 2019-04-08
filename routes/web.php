@@ -14,6 +14,10 @@ Route::prefix('student')->group(function () {
   Route::get('course_list','StudentController@course_list');
   Route::post('search_student_course','StudentController@search_student_course')->name('search_student_course');
   Route::get('announcements','StudentController@announcements');
+  Route::get('presentation','StudentController@presentation');
+  Route::get('assignment','StudentController@assignment');
+  Route::get('quiz','StudentController@quiz');
+  Route::post('update_student_info','StudentController@update_student_info')->name('update_student_info');
 });   
 //end student middleware................
 });
@@ -29,9 +33,17 @@ Route::prefix('teacher')->group(function () {
   Route::get('course_list','TeacherController@course_list');
   Route::post('search_teacher_course','TeacherController@search_teacher_course')->name('search_teacher_course');
   Route::get('announcements','TeacherController@announcements');
+   Route::get('presentation','TeacherController@presentation');
+  Route::get('assignment','TeacherController@assignment');
+  Route::get('quiz','TeacherController@quiz');
   Route::get('add_announcement','TeacherController@add_announcement')->name('add_announcement');
   Route::get('edit_announcement/{id}','TeacherController@edit_announcement')->name('edit_announcement');
   Route::post('delete_announcement/{id}','TeacherController@delete_announcement')->name('delete_announcement');
+  Route::post('submit_announcement','TeacherController@submit_announcement')->name('submit_announcement');
+  Route::post('select_course','TeacherController@select_course');
+    Route::post('edit_announcement/select_course','TeacherController@select_course');
+  Route::post('edit_announcement','TeacherController@submit_edit_announcement')->name('submit_edit_announcement');
+  Route::post('update_teacher_info','TeacherController@update_teacher_info')->name('update_teacher_info');
 });   
 //end teacher middleware................
 });

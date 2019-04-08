@@ -12,7 +12,7 @@
        <div class="row">
          <div class="col-md-12" style="text-align: center;">
           @if($data->photo != null)
-          <img src="{{url('storage/student_image/$data->photo')}}" style="height: 200px;width: 200px;border-radius: 50%;margin-left:-150px;">
+          <img src="{{url('storage/student_image/'.$data->id.'.jpg')}}" style="height: 200px;width: 200px;border-radius: 50%;margin-left:-150px;">
           @else
            <img src="{{url('img/user_logo.png')}}" style="height: 200px;width: 200px;border-radius: 50%;margin-left:-150px;">
            @endif

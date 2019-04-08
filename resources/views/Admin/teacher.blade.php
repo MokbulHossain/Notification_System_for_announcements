@@ -11,7 +11,7 @@
         @if($data->isNotEmpty()) @php $i=1; @endphp
           <table class="table" style="margin-top: 10px;">
           	<tr>
-          		<th>SL</th>
+          		<th>ID</th>
           		<th>Name</th>
           		<th>Email</th>
           		<th>Rank</th>
@@ -19,7 +19,7 @@
           	</tr>
 	         @foreach($data as $value)     
 	           	 <tr>
-	           	 	<td>{{$i}}</td>
+	           	 	<td>{{$value->id}}</td>
 	           	 	<td>{{$value->name}}</td>
 	           	 	<td>{{$value->email}}</td>
 	           	 	<td>{{$value->rank}}</td>
